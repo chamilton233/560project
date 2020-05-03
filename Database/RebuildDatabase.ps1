@@ -48,6 +48,10 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\S
 
 Write-Host "Inserting data..."
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Person.AddressType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Data\Basketball.Conference.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Data\Basketball.BasketballTeam.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Data\Basketball.TeamPlayer.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Data\Basketball.PlayerStats.sql"
 
 Write-Host "Rebuild completed."
 Write-Host ""
