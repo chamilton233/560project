@@ -21,6 +21,7 @@ namespace Database.Model
             FirstName = firstName;
             LastName = lastName;
             JerseyNumber = jerseyNumber;
-            Postion = postion;        }
+            Postion = postion;
+        }
     }
 }

@@ -5,19 +5,17 @@ using System.Data.SqlClient;
 
 namespace Database.DataDelegates
 {
-    internal class CreatePlayerDataDelegate : DataDelegate
+    internal class CreatePlayerDataDelegate : NonQueryDataDelegate<TeamPlayer>
     {
-        public readonly int playerId;
         public readonly int teamId;
         public readonly string firstName;
         public readonly string lastName;
         public readonly int jerseyNumber;
         public readonly string postion;//enum maybe
 
-        public CreatePlayerDataDelegate( int playerId,int teamId, string firstName, string lastName,
+        public CreatePlayerDataDelegate(int teamId, string firstName, string lastName,
         int jerseyNumber, string postion) : base("Basketball.CreatePlayer")
         {
-            this.playerId = playerId;
             this.teamId = teamId;
             this.firstName = firstName;
             this.lastName = lastName;
@@ -28,7 +26,6 @@ namespace Database.DataDelegates
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
-            command.Parameters.AddWithValue("PlayerId", playerId);
             command.Parameters.AddWithValue("TeamId", teamId);
             command.Parameters.AddWithValue("FirstName", firstName);
             command.Parameters.AddWithValue("LastName", lastName);
@@ -37,5 +34,9 @@ namespace Database.DataDelegates
 
         }
 
+        public override TeamPlayer Translate(SqlCommand command)
+        {
+            return new TeamPlayer((int)command.Parameters["PlayerId"].Value, teamId, firstName, lastName, jerseyNumber, postion);
+        }
     }
 }

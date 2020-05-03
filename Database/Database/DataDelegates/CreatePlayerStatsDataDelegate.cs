@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace Database.DataDelegates
 {
-    internal class CreatePlayerStatsDataDelegate : DataDelegate
+    internal class CreatePlayerStatsDataDelegate : NonQueryDataDelegate<PlayerStats>
     {
         public readonly int playerId;
         public readonly int points;
@@ -41,9 +41,11 @@ int fTMade, int  rebounds, int blocks, int steals) : base("Basketball.CreatePlay
             command.Parameters.AddWithValue("Rebounds", rebounds);
             command.Parameters.AddWithValue("Blocks", blocks);
             command.Parameters.AddWithValue("Steals", steals);
-
-
         }
 
+        public override PlayerStats Translate(SqlCommand command)
+        {
+            return new PlayerStats(playerId, points,assists,fTAttempts,fTMade,rebounds,blocks,steals);
+        }
     }
 }

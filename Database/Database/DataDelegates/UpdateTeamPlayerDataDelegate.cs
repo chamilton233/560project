@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace Database.DataDelegates
 {
-    internal class UpdateTeamPlayerDataDelegate : DataDelegate
+    internal class UpdateTeamPlayerDataDelegate : NonQueryDataDelegate<TeamPlayer>
     {
         public readonly int playerId;
         public readonly int teamId;
@@ -14,10 +14,10 @@ namespace Database.DataDelegates
         public readonly int jerseyNumber;
         public readonly string postion;//enum maybe
 
-        public CreatePlayerDataDelegate( int playerId,int teamId, string firstName, string lastName,
-int jerseyNumber, string postion) : base("the sql procdure name goes here")
+        public UpdateTeamPlayerDataDelegate( int playerId,int teamId, string firstName, string lastName,
+int jerseyNumber, string postion) : base("Basketball.UpdateTeamPlayer")
         {
-            
+            this.playerId = playerId;
             this.teamId = teamId;
             this.firstName = firstName;
             this.lastName = lastName;
@@ -28,6 +28,7 @@ int jerseyNumber, string postion) : base("the sql procdure name goes here")
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
+            command.Parameters.AddWithValue("PlayerId", playerId);
             command.Parameters.AddWithValue("TeamId", teamId);
             command.Parameters.AddWithValue("FirstName", firstName);
             command.Parameters.AddWithValue("LastName", lastName);
@@ -36,5 +37,9 @@ int jerseyNumber, string postion) : base("the sql procdure name goes here")
 
         }
 
+        public override TeamPlayer Translate(SqlCommand command)
+        {
+            return new TeamPlayer(playerId, teamId, firstName, lastName, jerseyNumber, postion);
+        }
     }
 }

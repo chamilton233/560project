@@ -32,7 +32,14 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\S
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.GameTeam.sql"
 
 Write-Host "Stored procedures..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.CreatePerson.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.CreatePlayer.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.CreatePlayerStats.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.GetTeamPlayer.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.FetchTeamPlayer.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.RetrieveTeamPlayers.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.UpdatePlayerStats.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Procedures\Basketball.UpdateTeamPlayer.sql"
+
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrievePersons.sql"
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.FetchPerson.sql"
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.GetPerson.sql"
