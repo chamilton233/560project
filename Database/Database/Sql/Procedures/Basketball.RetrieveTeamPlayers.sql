@@ -2,7 +2,7 @@
 
 AS
 
-Select T.PlayerId, T.TeamId, T.FirstName, T.LastName, T.JerseyNum, T.Postion
+Select T.PlayerId, T.TeamId, T.FirstName, T.LastName, T.JerseyNum, T.Position
 from Basketball.TeamPlayer T;
 
 GO

@@ -1,4 +1,4 @@
-﻿IF OBJECT_ID(N'Basketball.Confernce') IS NULL
+﻿IF OBJECT_ID(N'Basketball.Conference') IS NULL
 BEGIN
 CREATE TABLE Basketball.Conference
 (

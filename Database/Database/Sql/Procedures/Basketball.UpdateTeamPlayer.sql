@@ -1,4 +1,4 @@
-﻿Create PROCEDURE Basketball.UpDateTeamPlayer
+﻿Create or alter PROCEDURE Basketball.UpdateTeamPlayer
    @PlayerId INT,
    @TeamId int,
    @FirstName NVARCHAR(32),
@@ -10,7 +10,7 @@ begin
 	set Nocount On;
 	update Basketball.TeamPlayer
 	set TeamId= @TeamId,FirstName=@FirstName, LastName=@LastName, JerseyNum=@JerseyNum
-	,Postition= @Postition
+	,Position= @Postition
 	where PlayerId=@PlayerId;
 end
 GO

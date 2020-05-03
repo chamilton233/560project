@@ -11,7 +11,7 @@ namespace Database.DataDelegates
         public readonly string firstName;
         public readonly string lastName;
         public readonly int jerseyNumber;
-        public readonly string postion;//enum maybe
+        public readonly string position;//enum maybe
 
         public CreatePlayerDataDelegate(int teamId, string firstName, string lastName,
         int jerseyNumber, string postion) : base("Basketball.CreatePlayer")
@@ -20,7 +20,7 @@ namespace Database.DataDelegates
             this.firstName = firstName;
             this.lastName = lastName;
             this.jerseyNumber = jerseyNumber;
-            this.postion = postion;
+            this.position = position;
         }
 
         public override void PrepareCommand(SqlCommand command)
@@ -30,7 +30,7 @@ namespace Database.DataDelegates
             command.Parameters.AddWithValue("FirstName", firstName);
             command.Parameters.AddWithValue("LastName", lastName);
             command.Parameters.AddWithValue("JerseyNumber", jerseyNumber);
-            command.Parameters.AddWithValue("Postion", postion);
+            command.Parameters.AddWithValue("Position", position);
 
         }
 

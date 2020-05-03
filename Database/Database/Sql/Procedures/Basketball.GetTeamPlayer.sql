@@ -3,6 +3,6 @@
    @LastName Nvarchar(32)
 AS
 
-SELECT TP.PlayerId, TP.TeamId, TP.JerseyNum, Tp.Postion
+SELECT TP.PlayerId, TP.TeamId, TP.JerseyNum, TP.Position
 FROM Basketball.TeamPlayer TP
-WHERE Tp.FristName= @FirstName and Tp.LastName= @LastName 
+WHERE Tp.FirstName= @FirstName and Tp.LastName= @LastName 

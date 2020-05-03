@@ -1,4 +1,4 @@
-﻿Create PROCEDURE Basketball.CreatePlayerStats
+﻿Create or alter PROCEDURE Basketball.UpdatePlayerStats
    @PlayerId int,
    @Points int,
    @Assists int,
