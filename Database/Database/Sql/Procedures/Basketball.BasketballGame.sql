@@ -1,10 +1,11 @@
-﻿IF OBJECT_ID(N'Basketball.Confernce') IS NULL
+﻿IF OBJECT_ID(N'Basketball.BasketballGame') IS NULL
 BEGIN
-CREATE TABLE Basketball.Confernce
+Create Table Basketball.BasketballGame
 (
-    ConfernceId int not null IDENTITY(1,1) PRIMARY KEY,
-    name NVARCHAR(32) not null
-   );
+    GameId int not null IDENTITY(1,1) PRIMARY key,
+    StartTime DateTimeOffSet not null,
+    Score Int not null,
+)
 END;
 
 /****************************

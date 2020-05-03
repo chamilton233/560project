@@ -24,7 +24,7 @@ Write-Host "Creating schema..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Schemas\Basketball.sql"
 
 Write-Host "Creating tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.Confernce.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.Conference.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.BasketballTeam.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.TeamPlayer.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.PlayerStats.sql"
@@ -32,7 +32,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\S
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Database\Sql\Tables\Basketball.GameTeam.sql"
 
 Write-Host "Stored procedures..."
-# Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.CreatePerson.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.CreatePerson.sql"
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrievePersons.sql"
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.FetchPerson.sql"
 # Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.GetPerson.sql"
