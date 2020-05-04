@@ -7,13 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Database.Model;
+using Database;
+using System.Transactions;
 
 namespace FrontEnd
 {
     public partial class MainWindow : Form
     {
+        const string connectionString = @"Server=LAPTOP-TN62H4D5\SQLEXPRESS;Database=560 project;Integrated Security=SSPI;";
+
+        private SqlBasketballTeamsrepository teamsrepo;
+        private SqlTeamPlayerRepository PlayerTeamrepo;
+        private SqlPlayerStatsRepository PlayerstatsRepo;
+        private TransactionScope transaction;
+
         public MainWindow()
         {
+            teamsrepo = new SqlBasketballTeamsrepository(connectionString);
+            PlayerTeamrepo = new SqlTeamPlayerRepository(connectionString);
+            PlayerstatsRepo = new SqlPlayerStatsRepository(connectionString);
             InitializeComponent();
         }
 

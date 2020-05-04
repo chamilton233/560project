@@ -20,7 +20,6 @@ namespace Database.DataDelegates
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
-
             var p = command.Parameters.Add("PlayerId", SqlDbType.Int);
             p.Value = playerId;
         }
@@ -35,7 +34,7 @@ namespace Database.DataDelegates
                reader.GetString("FirstName"),
                reader.GetString("LastName"),
                reader.GetInt32("JerseyNum"),
-               reader.GetString("Postion"));
+               reader.GetString("Position"));
         }
     }
 }

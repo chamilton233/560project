@@ -21,7 +21,7 @@ namespace Database.DataDelegates
         {
             base.PrepareCommand(command);
 
-            var p = command.Parameters.Add("PlayerId", SqlDbType.Int);
+            var p = command.Parameters.Add("TeamId", SqlDbType.Int);
             p.Value = teamId;
         }
 

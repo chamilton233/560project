@@ -6,7 +6,7 @@ create table BasketBall.PlayerStats
     PlayerId int not null FOREIGN key REFERENCES Basketball.TeamPlayer(PlayerId),
     Points int not null,
     Assists int not null,
-    FtAttempts int not null,
+    FTAttempts int not null,
     FTMade int not null,
     Rebounds int not null,
     Blocks int not null,
