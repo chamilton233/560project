@@ -20,7 +20,7 @@ namespace Database.DataDelegates
             this.firstName = firstName;
             this.lastName = lastName;
             this.jerseyNumber = jerseyNumber;
-            this.position = position;
+            this.position = postion;
         }
 
         public override void PrepareCommand(SqlCommand command)
