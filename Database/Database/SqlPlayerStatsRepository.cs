@@ -44,12 +44,17 @@ namespace Database
 
         public PlayerStats FetchPlayerStats(int playerId)
         {
-            throw new NotImplementedException();
+            if (playerId < 0)
+                throw new ArgumentException("playerId cannot be less than 0", nameof(playerId));
+
+            var d = new FetchPlayerStatsDataDelegate(playerId);
+            return executor.ExecuteReader(d);
         }
 
         public IReadOnlyList<PlayerStats> RetrievePlayersStats()
         {
-            throw new NotImplementedException();
+            var d = new RetrievePlayerStatsDataDelegate();
+            return executor.ExecuteReader(d);
         }
 
         public PlayerStats UpdatePlayerStats(int playerId, int points, int assists, int fTAttempts, int fTMade, int rebounds, int blocks, int steals)
