@@ -16,7 +16,7 @@ namespace Database
             executor = new SqlCommandExecutor(connetionString);
         }
 
-        public TeamPlayer CreateTeamPlayer(int teamId, string firstName, string lastName, int jerseyNum, string postion)
+        public TeamPlayer CreateTeamPlayer(int teamId, string firstName, string lastName, int jerseyNum, string position)
         {
             if (teamId <0)
                 throw new ArgumentException("teamid cannot be less than 0", nameof(teamId));
@@ -30,10 +30,10 @@ namespace Database
             if (jerseyNum < 0 )
                 throw new ArgumentException("jerseyNum cannot be less than 0", nameof(jerseyNum));
 
-            if (string.IsNullOrWhiteSpace(postion))
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(postion));
+            if (string.IsNullOrWhiteSpace(position))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(position));
 
-            var d = new CreatePlayerDataDelegate(teamId, firstName,lastName,jerseyNum,postion);
+            var d = new CreatePlayerDataDelegate(teamId, firstName,lastName,jerseyNum,position);
             return executor.ExecuteNonQuery(d);
 
         }
@@ -65,7 +65,7 @@ namespace Database
             return executor.ExecuteReader(d);
         }
 
-        public TeamPlayer UpdateTeamPlayer(int playerId, int teamId, string firstName, string lastName, int jerseyNum, string postion)
+        public TeamPlayer UpdateTeamPlayer(int playerId, int teamId, string firstName, string lastName, int jerseyNum, string position)
         {
             if (teamId < 0)
                 throw new ArgumentException("teamid cannot be less than 0", nameof(teamId));
@@ -79,10 +79,10 @@ namespace Database
             if (jerseyNum < 0)
                 throw new ArgumentException("jerseyNum cannot be less than 0", nameof(jerseyNum));
 
-            if (string.IsNullOrWhiteSpace(postion))
-                throw new ArgumentException("The parameter cannot be null or empty.", nameof(postion));
+            if (string.IsNullOrWhiteSpace(position))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(position));
 
-            var d = new UpdateTeamPlayerDataDelegate(playerId, teamId, firstName, lastName, jerseyNum, postion);
+            var d = new UpdateTeamPlayerDataDelegate(playerId, teamId, firstName, lastName, jerseyNum, position);
             return executor.ExecuteNonQuery(d);
         }
     }

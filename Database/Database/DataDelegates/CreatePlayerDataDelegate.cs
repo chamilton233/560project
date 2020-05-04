@@ -14,13 +14,13 @@ namespace Database.DataDelegates
         public readonly string position;//enum maybe
 
         public CreatePlayerDataDelegate(int teamId, string firstName, string lastName,
-        int jerseyNumber, string postion) : base("Basketball.CreatePlayer")
+        int jerseyNumber, string position) : base("Basketball.CreatePlayer")
         {
             this.teamId = teamId;
             this.firstName = firstName;
             this.lastName = lastName;
             this.jerseyNumber = jerseyNumber;
-            this.position = postion;
+            this.position = position;
         }
 
         public override void PrepareCommand(SqlCommand command)

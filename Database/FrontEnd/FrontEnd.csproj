@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportWindow.Designer.cs">
+      <DependentUpon>ReportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchWindow.Designer.cs">
+      <DependentUpon>SearchWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ReportWindow.resx">
+      <DependentUpon>ReportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchWindow.resx">
+      <DependentUpon>SearchWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{0dc86026-5138-42c4-b8dd-f8676675b712}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

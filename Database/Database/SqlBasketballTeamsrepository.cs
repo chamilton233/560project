@@ -7,6 +7,7 @@ namespace Database
 {
     public class SqlBasketballTeamsrepository : IBasketballTeamsRepository
     {
+
         public BasketballTeam FetchBasketballTeam(int teamId)
         {
             throw new NotImplementedException();

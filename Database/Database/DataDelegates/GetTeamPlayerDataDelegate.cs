@@ -37,7 +37,7 @@ namespace Database.DataDelegates
                     firstName,
                     lastName,
                     reader.GetInt32("JerseyNum"),
-                    reader.GetString("Postion"));
+                    reader.GetString("Position"));
         }
     }
 }

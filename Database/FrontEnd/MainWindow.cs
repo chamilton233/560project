@@ -16,5 +16,17 @@ namespace FrontEnd
         {
             InitializeComponent();
         }
+
+        private void uxSearch_Click(object sender, EventArgs e)
+        {
+            SearchWindow search = new SearchWindow();
+            search.ShowDialog();
+        }
+
+        private void uxReports_Click(object sender, EventArgs e)
+        {
+            ReportWindow report = new ReportWindow();
+            report.ShowDialog();
+        }
     }
 }

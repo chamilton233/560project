@@ -11,7 +11,7 @@ namespace Database.Model
         public string FirstName { get;  }
         public string LastName { get; }
         public int JerseyNumber { get; }
-        public string Postion { get;}//enum maybe
+        public string Position { get;}//enum maybe
 
         public TeamPlayer(int playerId, int teamId, string firstName, string lastName,
    int jerseyNumber, string postion)
@@ -21,7 +21,7 @@ namespace Database.Model
             FirstName = firstName;
             LastName = lastName;
             JerseyNumber = jerseyNumber;
-            Postion = postion;
+            Position = postion;
         }
     }
 }

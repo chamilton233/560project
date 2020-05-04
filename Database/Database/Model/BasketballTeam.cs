@@ -8,13 +8,13 @@ namespace Database.Model
     {
         public int TeamId { get; }
         public string Name { get;  }
-        public int ConferneceId { get; }
+        public int ConfereneceId { get; }
 
-        public  BasketballTeam(int teamId, string name, int conferneceId)
+        public  BasketballTeam(int teamId, string name, int confereneceId)
         {
             TeamId = teamId;
             Name = name;
-            ConferneceId = conferneceId;
+            ConfereneceId = confereneceId;
         }
     }
 }
