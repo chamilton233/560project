@@ -34,6 +34,11 @@ namespace FrontEnd
         {
             int i = 1;
             //TeamPlayer team = PlayerTeamrepo.FetchTeamPlayer(1);
+            IReadOnlyList<PlayerStats> plas = PlayerstatsRepo.RetrievePlayersStats();
+            TeamPlayer z = PlayerTeamrepo.FetchTeamPlayer(1);
+            BasketballTeam a = teamsrepo.GetBasketballTeam("Celtics");
+
+            TeamPlayer T = PlayerTeamrepo.GetTeamPlayer("Alfonso", "Kelly");
             IReadOnlyList<PlayerStats> players = PlayerstatsRepo.RetrievePlayersStats();
             IReadOnlyList<TeamPlayer> tests = PlayerTeamrepo.RetrieveTeamPlayers();
             foreach (PlayerStats p in players)

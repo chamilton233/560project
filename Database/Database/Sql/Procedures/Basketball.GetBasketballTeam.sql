@@ -3,7 +3,7 @@ CREATE OR ALTER PROCEDURE Basketball.GetBasketballTeam
 AS
 
 select T.TeamId, T.ConferenceId
-from Basketball.BaksetballTeam T
+from Basketball.BasketballTeam T
 where @Name =T.Name
 
 

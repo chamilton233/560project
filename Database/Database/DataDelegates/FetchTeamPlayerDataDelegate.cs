@@ -20,7 +20,6 @@ namespace Database.DataDelegates
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
-
             var p = command.Parameters.Add("PlayerId", SqlDbType.Int);
             p.Value = playerId;
         }

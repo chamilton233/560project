@@ -19,17 +19,27 @@ namespace Database
 
         public BasketballTeam FetchBasketballTeam(int teamId)
         {
-            throw new NotImplementedException();
+            if (teamId < 0)
+                throw new ArgumentException("playerId cannot be less than 0", nameof(teamId));
+
+            var d = new FetchBasketballTeamDataDelegate(teamId);
+            return executor.ExecuteReader(d);
         }
 
         public BasketballTeam GetBasketballTeam(string name)
         {
-            throw new NotImplementedException();
+
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("The parameter cannot be null or empty.", nameof(name));
+
+            var d = new GetBasketballTeamDataDelegate(name);
+            return executor.ExecuteReader(d);
         }
 
         public IReadOnlyList<BasketballTeam> RetrievePlayersStats()
         {
-            throw new NotImplementedException();
+            var d = new RetreiveBasketballTeamsDataDelegate();
+            return executor.ExecuteReader(d);
         }
     }
 }
