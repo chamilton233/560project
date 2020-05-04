@@ -1,9 +1,13 @@
+/*
+This procedure creates a new player.
+It takes user input using functions provided by the SqlTeamPlayerRepository.
+*/
 CREATE OR ALTER PROCEDURE Basketball.CreatePlayer
    @FirstName NVARCHAR(32),
    @LastName NVARCHAR(32),
    @Position NVARCHAR(32),
-   @JerseyNum int,
-   @TeamId int, 
+   @JerseyNum INT,
+   @TeamId INT, 
    @PlayerId INT OUTPUT
 AS
 

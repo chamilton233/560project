@@ -1,18 +1,22 @@
-﻿Create or alter PROCEDURE Basketball.UpdatePlayerStats
-   @PlayerId int,
-   @Points int,
-   @Assists int,
-   @FTAttempts int,
-   @FTMade int,
-   @Rebounds int,
-   @Blocks int,
-   @Steals int
+﻿/*
+This procedure updates a PlayerStats record.  It takes user input from the GUI,
+finds the matching record by PlayerId, then updates that records attributes.
+*/
+CREATE or ALTER PROCEDURE Basketball.UpdatePlayerStats
+   @PlayerId INT,
+   @Points INT,
+   @Assists INT,
+   @FTAttempts INT,
+   @FTMade INT,
+   @Rebounds INT,
+   @Blocks INT,
+   @Steals INT
 AS
-begin 
-	set Nocount On;
-	update Basketball.PlayerStats
-	set Points= @Points,Assists=@Assists, FTAttempts=@FTAttempts, FTMade=@FTMade
+BEGIN 
+	SET NOCOUNT ON;
+	UPDATE Basketball.PlayerStats
+	SET Points= @Points,Assists=@Assists, FTAttempts=@FTAttempts, FTMade=@FTMade
 	,Rebounds= @Rebounds,Blocks=@Blocks, Steals=@Steals
-	where PlayerId=@PlayerId;
-end
+	WHERE PlayerId=@PlayerId;
+END
 GO

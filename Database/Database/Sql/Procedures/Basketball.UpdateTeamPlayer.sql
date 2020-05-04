@@ -1,16 +1,21 @@
-﻿Create or alter PROCEDURE Basketball.UpdateTeamPlayer
+﻿/*
+This procedure updates a TeamPlayer record.  It finds the appropriate
+record by PlayerId, then updates the associated attributes with the 
+user-provided information.
+*/
+CREATE or ALTER PROCEDURE Basketball.UpdateTeamPlayer
    @PlayerId INT,
-   @TeamId int,
+   @TeamId INT,
    @FirstName NVARCHAR(32),
    @LastName NVARCHAR(32),
-   @JerseyNum int,
+   @JerseyNum INT,
    @Position NVARCHAR(32)
 AS
-begin 
-	set Nocount On;
-	update Basketball.TeamPlayer
-	set TeamId= @TeamId,FirstName=@FirstName, LastName=@LastName, JerseyNum=@JerseyNum
+BEGIN 
+	SET NOCOUNT ON;
+	UPDATE Basketball.TeamPlayer
+	SET TeamId= @TeamId,FirstName=@FirstName, LastName=@LastName, JerseyNum=@JerseyNum
 	,Position= @Position
-	where PlayerId=@PlayerId;
-end
+	WHERE PlayerId=@PlayerId;
+END
 GO

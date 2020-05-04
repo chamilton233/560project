@@ -1,4 +1,8 @@
-﻿CREATE OR ALTER PROCEDURE Basketball.CreatePlayerStats
+﻿/*
+This procedure creates a PlayerStats record.
+It takes user input using functions provided by the SqlPlayerStatsRepository.
+*/
+CREATE OR ALTER PROCEDURE Basketball.CreatePlayerStats
 	@PlayerId Int,	
    @Points int,
    @Assists int,
