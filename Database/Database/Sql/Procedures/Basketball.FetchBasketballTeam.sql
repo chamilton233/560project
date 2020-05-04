@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE Basketball.CreatePlayer
+CREATE OR ALTER PROCEDURE Basketball.FetchBasketballTeam
    @TeamId int
 AS
 

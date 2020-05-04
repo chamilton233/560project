@@ -3,6 +3,6 @@
 AS
 
 Select T.TeamId, T.Name, T.ConferenceId
-from Basketball.BaksetballTeam T;
+from Basketball.BasketballTeam T;
 
 GO
