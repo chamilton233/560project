@@ -44,6 +44,10 @@ namespace FrontEnd
             IReadOnlyList<TeamPlayer> tests = PlayerTeamrepo.RetrieveTeamPlayers();
             BasketballTeam team = teamsrepo.FetchBasketballTeam(1);
             IReadOnlyList<BasketballTeam> teams = teamsrepo.RetrieveBasketballTeams();
+            TeamPlayer teamPlayer = PlayerTeamrepo.CreateTeamPlayer(1,"Jake","Rock",2,"Dead");
+            teamPlayer = PlayerTeamrepo.UpdateTeamPlayer(teamPlayer.PlayerId, 2,"Jake", "Rock", 2, "Dead");
+            PlayerStats playerStats = PlayerstatsRepo.CreatePlayerStats(teamPlayer.PlayerId,0,0,0,0,0,0,0);
+            playerStats = PlayerstatsRepo.UpdatePlayerStats(teamPlayer.PlayerId, 1, 1, 0, 0, 0, 0, 0);
             foreach (PlayerStats p in players)
             {
                 i++;

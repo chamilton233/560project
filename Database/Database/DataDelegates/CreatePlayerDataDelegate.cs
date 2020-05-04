@@ -26,11 +26,19 @@ namespace Database.DataDelegates
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
-            command.Parameters.AddWithValue("TeamId", teamId);
-            command.Parameters.AddWithValue("FirstName", firstName);
-            command.Parameters.AddWithValue("LastName", lastName);
-            command.Parameters.AddWithValue("JerseyNumber", jerseyNumber);
-            command.Parameters.AddWithValue("Position", position);
+
+            var p = command.Parameters.Add("TeamId", SqlDbType.Int);
+            p.Value = teamId;
+            p = command.Parameters.Add("FirstName", SqlDbType.NVarChar);
+            p.Value = firstName;
+            p = command.Parameters.Add("LastName", SqlDbType.NVarChar);
+            p.Value = lastName;
+            p = command.Parameters.Add("JerseyNum", SqlDbType.Int);
+            p.Value = jerseyNumber;
+            p = command.Parameters.Add("Position", SqlDbType.NVarChar);
+            p.Value = position;
+            p = command.Parameters.Add("PlayerId", SqlDbType.Int);
+            p.Direction = ParameterDirection.Output;
 
         }
 
