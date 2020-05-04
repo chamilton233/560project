@@ -10,7 +10,7 @@ namespace Database.DataDelegates
     internal class RetreiveBasketballTeamsDataDelegate: DataReaderDelegate<IReadOnlyList<BasketballTeam>>
     {
         public RetreiveBasketballTeamsDataDelegate()
-: base("Basketball.RetrievePlayerStats")
+: base("Basketball.RetrieveBasketballTeam")
         { }
 
         public override IReadOnlyList<BasketballTeam> Translate(SqlCommand command, IDataRowReader reader)
