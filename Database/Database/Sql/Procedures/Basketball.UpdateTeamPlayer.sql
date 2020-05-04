@@ -4,13 +4,13 @@
    @FirstName NVARCHAR(32),
    @LastName NVARCHAR(32),
    @JerseyNum int,
-   @Postition NVARCHAR(32)
+   @Position NVARCHAR(32)
 AS
 begin 
 	set Nocount On;
 	update Basketball.TeamPlayer
 	set TeamId= @TeamId,FirstName=@FirstName, LastName=@LastName, JerseyNum=@JerseyNum
-	,Position= @Postition
+	,Position= @Position
 	where PlayerId=@PlayerId;
 end
 GO

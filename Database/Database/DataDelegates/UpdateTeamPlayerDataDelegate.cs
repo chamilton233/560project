@@ -32,8 +32,8 @@ int jerseyNumber, string postion) : base("Basketball.UpdateTeamPlayer")
             command.Parameters.AddWithValue("TeamId", teamId);
             command.Parameters.AddWithValue("FirstName", firstName);
             command.Parameters.AddWithValue("LastName", lastName);
-            command.Parameters.AddWithValue("JerseyNumber", jerseyNumber);
-            command.Parameters.AddWithValue("Postion", postion);
+            command.Parameters.AddWithValue("JerseyNum", jerseyNumber);
+            command.Parameters.AddWithValue("Position", postion);
 
         }
 
