@@ -36,7 +36,7 @@ namespace Database.DataDelegates
 
         public override TeamPlayer Translate(SqlCommand command)
         {
-            return new TeamPlayer((int)command.Parameters["PlayerId"].Value, teamId, firstName, lastName, jerseyNumber, postion);
+            return new TeamPlayer((int)command.Parameters["PlayerId"].Value, teamId, firstName, lastName, jerseyNumber, position);
         }
     }
 }
