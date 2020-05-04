@@ -7,7 +7,7 @@ using Database.DataDelegates;
 
 namespace Database
 {
-    class SqlTeamPlayerRepository : ITeamPlayerRepository
+    public class SqlTeamPlayerRepository : ITeamPlayerRepository
     {
         private readonly SqlCommandExecutor executor;
 

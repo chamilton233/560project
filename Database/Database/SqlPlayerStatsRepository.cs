@@ -7,7 +7,7 @@ using Database.DataDelegates;
 
 namespace Database
 {
-    class SqlPlayerStatsRepository : IPlayerStatsRepository
+    public class SqlPlayerStatsRepository : IPlayerStatsRepository
     {
         private readonly SqlCommandExecutor executor;
 
