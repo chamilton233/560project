@@ -42,6 +42,7 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uxClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uxPlayerCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uxGrid)).BeginInit();
             this.SuspendLayout();
@@ -176,11 +177,22 @@
             this.Column11.Name = "Column11";
             this.Column11.Width = 52;
             // 
+            // uxClear
+            // 
+            this.uxClear.Location = new System.Drawing.Point(448, 99);
+            this.uxClear.Name = "uxClear";
+            this.uxClear.Size = new System.Drawing.Size(75, 23);
+            this.uxClear.TabIndex = 8;
+            this.uxClear.Text = "Clear";
+            this.uxClear.UseVisualStyleBackColor = true;
+            this.uxClear.Click += new System.EventHandler(this.uxClear_Click);
+            // 
             // ReportWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 729);
+            this.Controls.Add(this.uxClear);
             this.Controls.Add(this.uxGrid);
             this.Controls.Add(this.uxRunReport);
             this.Controls.Add(this.uxPickStat);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Button uxClear;
     }
 }

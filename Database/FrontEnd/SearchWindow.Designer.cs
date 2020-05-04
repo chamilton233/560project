@@ -92,9 +92,9 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.uxGrid.Location = new System.Drawing.Point(51, 242);
+            this.uxGrid.Location = new System.Drawing.Point(12, 93);
             this.uxGrid.Name = "uxGrid";
-            this.uxGrid.Size = new System.Drawing.Size(546, 150);
+            this.uxGrid.Size = new System.Drawing.Size(477, 550);
             this.uxGrid.TabIndex = 9;
             // 
             // Column1
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 413);
+            this.ClientSize = new System.Drawing.Size(499, 655);
             this.Controls.Add(this.uxShowAllBtn);
             this.Controls.Add(this.uxGrid);
             this.Controls.Add(this.label2);

@@ -29,22 +29,40 @@ namespace FrontEnd
 
         private void uxRunReport_Click(object sender, EventArgs e)
         {
+            uxGrid.Rows.Clear();
+            uxGrid.Refresh();
             int Row = 0;
             TeamPlayer player;
             IReadOnlyList<PlayerStats> playerList = statsrepo.RetrievePlayersStats();
             List<PlayerStats> stats = playerList.ToList<PlayerStats>();
             PlayerStats[] statsArr = playerList.ToArray();
             PlayerStats temp;
-
-
-
+            
             List<PlayerStats> sorted = stats.OrderBy(o => o.Points).ToList();
+
+            if (uxPickStat.Text == "Points")
+            
+                sorted = stats.OrderBy(o => o.Points).ToList();
+            
+            else if (uxPickStat.Text == "Assists")
+                sorted = stats.OrderBy(o => o.Assists).ToList();
+            else if (uxPickStat.Text == "Free Throw Attempts")
+                sorted = stats.OrderBy(o => o.FreeThrowsAttempts).ToList();
+            else if (uxPickStat.Text == "Free Throws Made")
+                sorted = stats.OrderBy(o => o.FreeThrowsMade).ToList();
+            else if (uxPickStat.Text == "Rebounds")
+                sorted = stats.OrderBy(o => o.Rebounds).ToList();
+            else if (uxPickStat.Text == "Blocks")
+                sorted = stats.OrderBy(o => o.Blocks).ToList();
+            else if (uxPickStat.Text == "Steals")
+                sorted = stats.OrderBy(o => o.Steals).ToList();
+
 
             //statsArr.Sort((x, y) => x.Assists.CompareTo(y.Assists));
             if (uxTopBot.SelectedIndex == 1)
                 sorted.Reverse();
             else
-            sorted.Take(Decimal.ToInt32(uxPlayerCount.Value));
+                sorted.Take(Decimal.ToInt32(uxPlayerCount.Value));
             for (int i = 0; i < Decimal.ToInt32(uxPlayerCount.Value); i++)// PlayerStats s in sorted)//statsArr.Take(Decimal.ToInt32(playerCount.Value)))
             {
                 player = playerrepo.FetchTeamPlayer(sorted[i].PlayerId);
@@ -89,6 +107,12 @@ namespace FrontEnd
         private void reportList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void uxClear_Click(object sender, EventArgs e)
+        {
+            uxGrid.Rows.Clear();
+            uxGrid.Refresh();
         }
     }
 }

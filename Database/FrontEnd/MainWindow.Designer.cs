@@ -35,9 +35,9 @@
             // 
             // uxSearch
             // 
-            this.uxSearch.Location = new System.Drawing.Point(12, 10);
+            this.uxSearch.Location = new System.Drawing.Point(81, 12);
             this.uxSearch.Name = "uxSearch";
-            this.uxSearch.Size = new System.Drawing.Size(202, 119);
+            this.uxSearch.Size = new System.Drawing.Size(279, 155);
             this.uxSearch.TabIndex = 0;
             this.uxSearch.Text = "Search";
             this.uxSearch.UseVisualStyleBackColor = true;
@@ -45,9 +45,9 @@
             // 
             // uxReports
             // 
-            this.uxReports.Location = new System.Drawing.Point(12, 131);
+            this.uxReports.Location = new System.Drawing.Point(81, 173);
             this.uxReports.Name = "uxReports";
-            this.uxReports.Size = new System.Drawing.Size(202, 119);
+            this.uxReports.Size = new System.Drawing.Size(279, 155);
             this.uxReports.TabIndex = 1;
             this.uxReports.Text = "Reports";
             this.uxReports.UseVisualStyleBackColor = true;
@@ -55,9 +55,9 @@
             // 
             // uxUpdateBtn
             // 
-            this.uxUpdateBtn.Location = new System.Drawing.Point(12, 256);
+            this.uxUpdateBtn.Location = new System.Drawing.Point(81, 334);
             this.uxUpdateBtn.Name = "uxUpdateBtn";
-            this.uxUpdateBtn.Size = new System.Drawing.Size(202, 119);
+            this.uxUpdateBtn.Size = new System.Drawing.Size(279, 155);
             this.uxUpdateBtn.TabIndex = 2;
             this.uxUpdateBtn.Text = "Update";
             this.uxUpdateBtn.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 381);
+            this.ClientSize = new System.Drawing.Size(434, 518);
             this.Controls.Add(this.uxUpdateBtn);
             this.Controls.Add(this.uxReports);
             this.Controls.Add(this.uxSearch);
