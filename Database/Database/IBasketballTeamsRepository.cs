@@ -7,7 +7,7 @@ namespace Database
 {
     public interface IBasketballTeamsRepository
     {
-        IReadOnlyList<BasketballTeam> RetrievePlayersStats();
+        IReadOnlyList<BasketballTeam> RetrieveBasketballTeams();
 
         BasketballTeam FetchBasketballTeam(int teamId);
 

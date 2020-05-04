@@ -36,7 +36,7 @@ namespace Database
             return executor.ExecuteReader(d);
         }
 
-        public IReadOnlyList<BasketballTeam> RetrievePlayersStats()
+        public IReadOnlyList<BasketballTeam> RetrieveBasketballTeams()
         {
             var d = new RetreiveBasketballTeamsDataDelegate();
             return executor.ExecuteReader(d);
