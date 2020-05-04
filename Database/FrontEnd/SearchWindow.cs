@@ -31,9 +31,7 @@ namespace FrontEnd
         {
             InitializeComponent();
             //teamsrepo = new SqlBasketballTeamsrepository(connectionString);
-            playerrepo = new SqlTeamPlayerRepository(connectionString);
-
-            
+            playerrepo = new SqlTeamPlayerRepository(connectionString);         
 
 
         }

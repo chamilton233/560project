@@ -1,6 +1,6 @@
 Param(
-   [string] $Server = "LAPTOP-TN62H4D5\SQLEXPRESS",
-   [string] $Database = "560 Project"
+   [string] $Server = "MIKE-PC2015",
+   [string] $Database = "560Project"
 )
 
 # This script requires the SQL Server module for PowerShell.

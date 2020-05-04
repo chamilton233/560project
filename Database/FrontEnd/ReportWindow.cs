@@ -16,12 +16,21 @@ namespace FrontEnd
 {
     public partial class ReportWindow : Form
     {
+        const string connectionString = @"Server=MIKE-PC2015;Database=560Project;Integrated Security = SSPI;";
         public List<TeamPlayer> playerList = new List<TeamPlayer>();
+        private SqlPlayerStatsRepository statsrepo;
+
 
 
         public ReportWindow()
         {
             InitializeComponent();
+            statsrepo = new SqlPlayerStatsRepository(connectionString);
+        }
+
+        private void uxRunReport_Click(object sender, EventArgs e)
+        {
+            PlayerStats stats = statsrepo.RetrievePlayersStats();
         }
     }
 }
