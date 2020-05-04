@@ -7,7 +7,7 @@ namespace Database
 {
     interface ITeamPlayerRepository
     {
-        TeamPlayer CreateTeamPlayer(int teamId, string firstName, string lastName, int jerseyNum, string postion);
+        TeamPlayer CreatePlayer(int teamId, string firstName, string lastName, int jerseyNum, string postion);
 
         TeamPlayer UpdateTeamPlayer(int playerId, int teamId, string firstName, string lastName, int jerseyNum, string postion);
 

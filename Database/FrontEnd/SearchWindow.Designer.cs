@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SearchBy = new System.Windows.Forms.Label();
             this.uxFirstName = new System.Windows.Forms.TextBox();
             this.uxLastName = new System.Windows.Forms.TextBox();
-            this.uxJerseyNum = new System.Windows.Forms.TextBox();
-            this.uxTeam = new System.Windows.Forms.TextBox();
-            this.uxPosition = new System.Windows.Forms.TextBox();
             this.uxSearchExecute = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.uxGrid = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uxShowAllBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // SearchBy
-            // 
-            this.SearchBy.AutoSize = true;
-            this.SearchBy.Location = new System.Drawing.Point(15, 14);
-            this.SearchBy.Name = "SearchBy";
-            this.SearchBy.Size = new System.Drawing.Size(64, 13);
-            this.SearchBy.TabIndex = 0;
-            this.SearchBy.Text = "Search by...";
             // 
             // uxFirstName
             // 
@@ -65,30 +56,9 @@
             this.uxLastName.Size = new System.Drawing.Size(100, 20);
             this.uxLastName.TabIndex = 2;
             // 
-            // uxJerseyNum
-            // 
-            this.uxJerseyNum.Location = new System.Drawing.Point(71, 93);
-            this.uxJerseyNum.Name = "uxJerseyNum";
-            this.uxJerseyNum.Size = new System.Drawing.Size(100, 20);
-            this.uxJerseyNum.TabIndex = 3;
-            // 
-            // uxTeam
-            // 
-            this.uxTeam.Location = new System.Drawing.Point(71, 119);
-            this.uxTeam.Name = "uxTeam";
-            this.uxTeam.Size = new System.Drawing.Size(100, 20);
-            this.uxTeam.TabIndex = 4;
-            // 
-            // uxPosition
-            // 
-            this.uxPosition.Location = new System.Drawing.Point(71, 145);
-            this.uxPosition.Name = "uxPosition";
-            this.uxPosition.Size = new System.Drawing.Size(100, 20);
-            this.uxPosition.TabIndex = 5;
-            // 
             // uxSearchExecute
             // 
-            this.uxSearchExecute.Location = new System.Drawing.Point(51, 192);
+            this.uxSearchExecute.Location = new System.Drawing.Point(192, 41);
             this.uxSearchExecute.Name = "uxSearchExecute";
             this.uxSearchExecute.Size = new System.Drawing.Size(75, 44);
             this.uxSearchExecute.TabIndex = 6;
@@ -114,70 +84,80 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Last Name";
             // 
-            // label3
+            // uxGrid
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Number";
+            this.uxGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.uxGrid.Location = new System.Drawing.Point(51, 242);
+            this.uxGrid.Name = "uxGrid";
+            this.uxGrid.Size = new System.Drawing.Size(546, 150);
+            this.uxGrid.TabIndex = 9;
             // 
-            // label4
+            // Column1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 122);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Team";
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
             // 
-            // label5
+            // Column3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Position";
+            this.Column3.HeaderText = "Jersey Number";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Position";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Team";
+            this.Column5.Name = "Column5";
+            // 
+            // uxShowAllBtn
+            // 
+            this.uxShowAllBtn.Location = new System.Drawing.Point(295, 41);
+            this.uxShowAllBtn.Name = "uxShowAllBtn";
+            this.uxShowAllBtn.Size = new System.Drawing.Size(75, 46);
+            this.uxShowAllBtn.TabIndex = 10;
+            this.uxShowAllBtn.Text = "Show All";
+            this.uxShowAllBtn.UseVisualStyleBackColor = true;
+            this.uxShowAllBtn.Click += new System.EventHandler(this.uxShowAllBtn_Click);
             // 
             // SearchWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 332);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(639, 413);
+            this.Controls.Add(this.uxShowAllBtn);
+            this.Controls.Add(this.uxGrid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uxSearchExecute);
-            this.Controls.Add(this.uxPosition);
-            this.Controls.Add(this.uxTeam);
-            this.Controls.Add(this.uxJerseyNum);
             this.Controls.Add(this.uxLastName);
             this.Controls.Add(this.uxFirstName);
-            this.Controls.Add(this.SearchBy);
             this.Name = "SearchWindow";
             this.Text = "Player Search";
+            ((System.ComponentModel.ISupportInitialize)(this.uxGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label SearchBy;
         private System.Windows.Forms.TextBox uxFirstName;
         private System.Windows.Forms.TextBox uxLastName;
-        private System.Windows.Forms.TextBox uxJerseyNum;
-        private System.Windows.Forms.TextBox uxTeam;
-        private System.Windows.Forms.TextBox uxPosition;
         private System.Windows.Forms.Button uxSearchExecute;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView uxGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button uxShowAllBtn;
     }
 }

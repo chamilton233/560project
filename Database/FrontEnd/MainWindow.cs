@@ -41,5 +41,11 @@ namespace FrontEnd
             ReportWindow report = new ReportWindow();
             report.ShowDialog();
         }
+
+        private void uxUpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateWindow update = new UpdateWindow();
+            update.ShowDialog();
+        }
     }
 }

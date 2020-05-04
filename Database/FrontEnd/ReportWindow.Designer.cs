@@ -28,48 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.playerCount = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.uxTopBot = new System.Windows.Forms.ComboBox();
+            this.uxPlayerCount = new System.Windows.Forms.NumericUpDown();
+            this.uxPickStat = new System.Windows.Forms.ComboBox();
             this.uxRunReport = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.playerCount)).BeginInit();
+            this.uxGrid = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.uxPlayerCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // uxTopBot
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Top",
-            "Bottom"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 59);
-            this.comboBox1.TabIndex = 0;
+            this.uxTopBot.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.uxTopBot.FormattingEnabled = true;
+            this.uxTopBot.Items.AddRange(new object[] {
+            "Bottom",
+            "Top"});
+            this.uxTopBot.Location = new System.Drawing.Point(20, 12);
+            this.uxTopBot.Name = "uxTopBot";
+            this.uxTopBot.Size = new System.Drawing.Size(121, 59);
+            this.uxTopBot.TabIndex = 0;
             // 
-            // playerCount
+            // uxPlayerCount
             // 
-            this.playerCount.Location = new System.Drawing.Point(139, 55);
-            this.playerCount.Minimum = new decimal(new int[] {
+            this.uxPlayerCount.Location = new System.Drawing.Point(147, 13);
+            this.uxPlayerCount.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.playerCount.Name = "playerCount";
-            this.playerCount.Size = new System.Drawing.Size(120, 20);
-            this.playerCount.TabIndex = 1;
-            this.playerCount.Value = new decimal(new int[] {
+            this.uxPlayerCount.Name = "uxPlayerCount";
+            this.uxPlayerCount.Size = new System.Drawing.Size(120, 20);
+            this.uxPlayerCount.TabIndex = 1;
+            this.uxPlayerCount.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // comboBox2
+            // uxPickStat
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.uxPickStat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.uxPickStat.FormattingEnabled = true;
+            this.uxPickStat.Items.AddRange(new object[] {
             "Points",
             "Assists",
             "Free Throw Attempts",
@@ -77,22 +87,14 @@
             "Rebounds",
             "Blocks",
             "Steals"});
-            this.comboBox2.Location = new System.Drawing.Point(265, 54);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 124);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(392, 54);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(396, 381);
-            this.listBox1.TabIndex = 5;
+            this.uxPickStat.Location = new System.Drawing.Point(273, 12);
+            this.uxPickStat.Name = "uxPickStat";
+            this.uxPickStat.Size = new System.Drawing.Size(121, 124);
+            this.uxPickStat.TabIndex = 4;
             // 
             // uxRunReport
             // 
-            this.uxRunReport.Location = new System.Drawing.Point(93, 178);
+            this.uxRunReport.Location = new System.Drawing.Point(448, 60);
             this.uxRunReport.Name = "uxRunReport";
             this.uxRunReport.Size = new System.Drawing.Size(75, 23);
             this.uxRunReport.TabIndex = 6;
@@ -100,29 +102,113 @@
             this.uxRunReport.UseVisualStyleBackColor = true;
             this.uxRunReport.Click += new System.EventHandler(this.uxRunReport_Click);
             // 
+            // uxGrid
+            // 
+            this.uxGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.uxGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uxGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.uxGrid.Location = new System.Drawing.Point(12, 142);
+            this.uxGrid.Name = "uxGrid";
+            this.uxGrid.Size = new System.Drawing.Size(570, 575);
+            this.uxGrid.TabIndex = 7;
+            this.uxGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uxGrid_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Player";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 61;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Position";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 69;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "PTS";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 53;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "AST";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 53;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "FTA";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 52;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "FTM";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 54;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "REB";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 54;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "BLK";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 52;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "STL";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 52;
+            // 
             // ReportWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(625, 729);
+            this.Controls.Add(this.uxGrid);
             this.Controls.Add(this.uxRunReport);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.playerCount);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.uxPickStat);
+            this.Controls.Add(this.uxPlayerCount);
+            this.Controls.Add(this.uxTopBot);
             this.Name = "ReportWindow";
             this.Text = "Reports";
-            ((System.ComponentModel.ISupportInitialize)(this.playerCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxPlayerCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.NumericUpDown playerCount;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox uxTopBot;
+        private System.Windows.Forms.NumericUpDown uxPlayerCount;
+        private System.Windows.Forms.ComboBox uxPickStat;
         private System.Windows.Forms.Button uxRunReport;
+        private System.Windows.Forms.DataGridView uxGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

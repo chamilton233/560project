@@ -14,7 +14,7 @@ namespace Database.Model
         public string Position { get;}//enum maybe
 
         public TeamPlayer(int playerId, int teamId, string firstName, string lastName,
-   int jerseyNumber, string postion)
+                            int jerseyNumber, string postion)
         {
             PlayerId = playerId;
             TeamId = teamId;
@@ -22,6 +22,11 @@ namespace Database.Model
             LastName = lastName;
             JerseyNumber = jerseyNumber;
             Position = postion;
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
         }
     }
 }

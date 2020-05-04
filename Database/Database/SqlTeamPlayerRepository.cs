@@ -16,7 +16,7 @@ namespace Database
             executor = new SqlCommandExecutor(connetionString);
         }
 
-        public TeamPlayer CreateTeamPlayer(int teamId, string firstName, string lastName, int jerseyNum, string position)
+        public TeamPlayer CreatePlayer(int teamId, string firstName, string lastName, int jerseyNum, string position)
         {
             if (teamId <0)
                 throw new ArgumentException("teamid cannot be less than 0", nameof(teamId));

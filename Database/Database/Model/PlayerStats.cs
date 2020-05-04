@@ -27,5 +27,10 @@ namespace Database.Model
             Blocks = blocks;
             Steals = steals;
         }
+
+        public override string ToString()
+        {
+            return $"{Points}, {Assists}, {FreeThrowsAttempts}, {FreeThrowsMade}, {Rebounds}, {Blocks}, {Steals}";
+        }       
     }
 }
