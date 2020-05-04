@@ -46,8 +46,10 @@
   <ItemGroup>
     <Compile Include="DataDelegates\CreatePlayerDataDelegate.cs" />
     <Compile Include="DataDelegates\CreatePlayerStatsDataDelegate.cs" />
+    <Compile Include="DataDelegates\FetchBasketballTeamDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchPlayerStatsDataDelegate.cs" />
     <Compile Include="DataDelegates\FetchTeamPlayerDataDelegate.cs" />
+    <Compile Include="DataDelegates\GetBasketballTeamDataDelegate.cs" />
     <Compile Include="DataDelegates\GetTeamPlayerDataDelegate.cs" />
     <Compile Include="DataDelegates\RetreiveBasketballTeamsDataDelegate.cs" />
     <Compile Include="DataDelegates\RetrievePlayerStatsDataDelegate.cs" />
@@ -83,11 +85,14 @@
     <Content Include="Sql\Data\Basketball.Conference.sql" />
     <Content Include="Sql\Data\Basketball.PlayerStats.sql" />
     <Content Include="Sql\Data\Basketball.TeamPlayer.sql" />
+    <Content Include="Sql\Procedures\Basketball.FetchBasketballTeam.sql" />
+    <Content Include="Sql\Procedures\Basketball.GetBasketballTeam.sql" />
     <Content Include="Sql\Procedures\Basketball.CreatePlayer.sql" />
     <Content Include="Sql\Procedures\Basketball.CreatePlayerStats.sql" />
     <Content Include="Sql\Procedures\Basketball.FetchPlayerStats.sql" />
     <Content Include="Sql\Procedures\Basketball.FetchTeamPlayer.sql" />
     <Content Include="Sql\Procedures\Basketball.GetTeamPlayer.sql" />
+    <Content Include="Sql\Procedures\Basketball.RetrieveBasketballTeam.sql" />
     <Content Include="Sql\Procedures\Basketball.RetrievePlayerStats.sql" />
     <Content Include="Sql\Procedures\Basketball.RetrieveTeamPlayers.sql" />
     <Content Include="Sql\Procedures\Basketball.UpdatePlayerStats.sql" />
